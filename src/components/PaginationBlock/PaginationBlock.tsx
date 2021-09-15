@@ -13,6 +13,7 @@ export const PaginationBlock = (props: PaginationBlockPropsType) => {
     <Pagination size="lg" className="d-flex justify-content-center">
       <PaginationItem disabled={!props.prev}>
         <PaginationLink
+          aria-label=" "
           previous
           href="#"
           onClick={() => {props.onClick(EAction.prev)}}
@@ -20,9 +21,11 @@ export const PaginationBlock = (props: PaginationBlockPropsType) => {
       </PaginationItem>
       <PaginationItem disabled={!props.next}>
         <PaginationLink
+          aria-label=" "
           next
           href="#"
           onClick={() => {props.onClick(EAction.next)}}
+          
         />
       </PaginationItem>
     </Pagination>
